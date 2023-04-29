@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 
 body {
@@ -35,10 +35,9 @@ header > h1 {
 .card-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: start;
+  align-items: flex-start;
+  align-content: flex-start;
   gap: 2em;
-  height: 100vh;
   /* grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr; */
 }
 
@@ -53,6 +52,15 @@ header > h1 {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
 
   cursor: pointer;
+  transition: 0.15s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.enlarge {
+  width: 600px;
 }
 
 .card-image {
@@ -66,30 +74,46 @@ header > h1 {
   color: #ff8c42;
   font-weight: bold;
   text-transform: uppercase;
+  overflow-wrap: break-word;
+  font-size: 30px;
 
   border-top: 5px solid #ff8c42;
   border-bottom: 5px solid #ff8c42;
+  padding: 0 20px 0 20px;
 }
 
-.card .card-desc {
-  font-size: 20px;
-  text-align: justify;
-  color: black;
+.card-desc {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: start;
+
   padding: 20px;
+}
+
+.card-desc span {
+  text-align: center;
+  font-size: 22px;
 }
 
 footer {
   background-color: #ff8c42;
   height: 120px;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
 
-  padding-right: 30px;
+  padding: 0 50px;
 }
 
 footer > p {
-  font-size: 24px;
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+}
+
+footer > h1 {
+  font-size: 40px;
   font-weight: 100;
   color: white;
 }
