@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -55,10 +55,6 @@ header > h1 {
   transition: 0.15s ease-out;
 }
 
-.card:hover {
-  transform: scale(1.02);
-}
-
 .enlarge {
   width: 600px;
 }
@@ -77,8 +73,8 @@ header > h1 {
   overflow-wrap: break-word;
   font-size: 30px;
 
-  border-top: 5px solid #ff8c42;
-  border-bottom: 5px solid #ff8c42;
+  border-top: 3px solid #ff8c42;
+  border-bottom: 3px solid #ff8c42;
   padding: 0 20px 0 20px;
 }
 
@@ -119,4 +115,7 @@ footer > h1 {
 }
 
 @media only screen and (min-width: 600px) {
+  .card:hover {
+    transform: scale(1.02);
+  }
 }
