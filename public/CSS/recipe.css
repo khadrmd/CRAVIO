@@ -1,0 +1,121 @@
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+
+  /* border: 1px solid red; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main {
+  background-color: white;
+  padding: 50px;
+}
+
+header {
+  background-color: #ff8c42;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+header > h1 {
+  color: white;
+  font-size: 75px;
+  font-weight: 100;
+  justify-items: center;
+}
+
+.recipe-title {
+  border-top: 3px solid #ff8c42;
+  border-bottom: 3px solid #ff8c42;
+  text-transform: uppercase;
+  color: #ff8c42;
+  text-align: center;
+  font-size: 60px;
+}
+
+.recipe-img {
+  width: 100%;
+}
+
+.recipe-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  gap: 50px;
+  border-top: 3px solid #ff8c42;
+  border-bottom: 3px solid #ff8c42;
+}
+
+.recipe-group > span {
+  font-size: 25px;
+}
+
+.recipe-desc {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.recipe-prep {
+  display: flex;
+  flex-direction: row;
+}
+
+.recipe-steps {
+  list-style-position: inside;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 25px;
+  border-top: 3px solid #ff8c42;
+  border-bottom: 3px solid #ff8c42;
+  text-align: center;
+  color: #ff8c42;
+}
+
+.prep-ingredients,
+.prep-cookware {
+  width: 100%;
+  padding-bottom: 20px;
+  list-style-position: inside;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: normal;
+}
+
+footer {
+  background-color: #ff8c42;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 50px;
+}
+
+footer > p {
+  font-size: 16px;
+  font-weight: 100;
+  color: white;
+}
+
+footer > h1 {
+  font-size: 40px;
+  font-weight: 100;
+  color: white;
+}
