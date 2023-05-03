@@ -2,7 +2,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 1rem;
 
   /* border: 1px solid red; */
 }
@@ -14,8 +14,10 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   background-color: white;
-  padding: 50px;
+  padding: 1rem 2rem;
 }
 
 header {
@@ -23,99 +25,192 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  height: 80px;
 }
 
 header > h1 {
   color: white;
-  font-size: 75px;
+  font-size: 3rem;
   font-weight: 100;
   justify-items: center;
 }
 
 .recipe-title {
-  border-top: 3px solid #ff8c42;
-  border-bottom: 3px solid #ff8c42;
+  border-top: 2px solid #ff8c42;
+  border-bottom: 2px solid #ff8c42;
   text-transform: uppercase;
   color: #ff8c42;
   text-align: center;
-  font-size: 60px;
+  font-size: 2rem;
 }
 
 .recipe-img {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  margin-block: 10px;
+  align-self: center;
+  justify-self: center;
   width: 100%;
+  max-width: 800px;
 }
 
 .recipe-group {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
-  gap: 50px;
-  border-top: 3px solid #ff8c42;
-  border-bottom: 3px solid #ff8c42;
+  border-top: 2px solid #ff8c42;
+  border-bottom: 2px solid #ff8c42;
 }
 
 .recipe-group > span {
-  font-size: 25px;
+  text-align: center;
 }
 
 .recipe-desc {
   padding-top: 20px;
   padding-bottom: 20px;
-  text-align: center;
+  text-align: justify;
 }
 
 .recipe-prep {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-areas:
+    "prep-title prep-title"
+    "prep-ingredients prep-cookwares";
+}
+
+.recipe-prep > h2 {
+  grid-area: prep-title;
+  align-self: center;
 }
 
 .recipe-steps {
   list-style-position: inside;
-  padding-top: 20px;
-  padding-bottom: 20px;
+}
+
+.steps {
+  padding-block: 20px;
 }
 
 h2 {
-  font-size: 25px;
-  border-top: 3px solid #ff8c42;
-  border-bottom: 3px solid #ff8c42;
+  font-size: 1rem;
+  border-top: 2px solid #ff8c42;
+  border-bottom: 2px solid #ff8c42;
   text-align: center;
   color: #ff8c42;
 }
 
-.prep-ingredients,
-.prep-cookware {
+.prep-ingredients {
+  grid-area: prep-ingredients;
   width: 100%;
-  padding-bottom: 20px;
   list-style-position: inside;
+  list-style-type: circle;
+  padding-bottom: 20px;
+}
+
+.prep-cookwares {
+  grid-area: prep-cookwares;
+  width: 100%;
+  list-style-position: inside;
+  list-style-type: square;
+  padding-bottom: 20px;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1rem;
   text-align: center;
   font-weight: normal;
 }
 
 footer {
   background-color: #ff8c42;
-  height: 120px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 50px;
+  padding: 0 3rem;
 }
 
 footer > p {
-  font-size: 16px;
+  font-size: 0.8rem;
   font-weight: 100;
   color: white;
 }
 
 footer > h1 {
-  font-size: 40px;
+  font-size: 1.5rem;
   font-weight: 100;
   color: white;
+}
+
+@media all and (min-width: 600px) {
+  main {
+    padding: 1rem 5rem;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  main {
+    display: grid;
+    grid-template-areas:
+      "recipe-title recipe-title"
+      "recipe-image recipe-group"
+      "recipe-image recipe-desc"
+      "recipe-prep recipe-prep"
+      "recipe-steps recipe-steps";
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+  }
+
+  .recipe-title {
+    grid-area: recipe-title;
+  }
+
+  .recipe-img {
+    grid-area: recipe-image;
+  }
+
+  .recipe-group {
+    align-self: center;
+    grid-area: recipe-group;
+  }
+
+  .recipe-desc {
+    grid-area: recipe-desc;
+    padding: 20px;
+  }
+
+  .recipe-prep {
+    grid-area: recipe-prep;
+  }
+
+  .recipe-steps {
+    grid-area: recipe-steps;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  main {
+    display: grid;
+    grid-template-areas:
+      "recipe-title recipe-title"
+      "recipe-image recipe-group"
+      "recipe-image recipe-desc"
+      "recipe-image recipe-prep"
+      "recipe-steps recipe-steps";
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+  }
+
+  .recipe-group {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: center;
+  }
+
+  .steps {
+    margin: 0 10rem;
+  }
 }
