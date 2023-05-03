@@ -2,6 +2,7 @@
   {
     "id": 0,
     "name": "Cheesecake",
+    "image": "cheesecake.jpg",
     "type": "Dessert",
     "difficulty": "🍪🍪🍪🍪",
     "cost": "💵💵💵",
@@ -13,6 +14,7 @@
   {
     "id": 1,
     "name": "Icecream",
+    "image": "icecream.jpg",
     "type": "Dessert",
     "difficulty": "🍪",
     "cost": "💵",
@@ -28,6 +30,7 @@
   {
     "id": 2,
     "name": "Cookies",
+    "image": "cookies.jpg",
     "type": "Dessert",
     "difficulty": "🍪🍪",
     "cost": "💵",
