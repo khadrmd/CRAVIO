@@ -1,0 +1,43 @@
+[
+  {
+    "id": 0,
+    "name": "Cheesecake",
+    "type": "Dessert",
+    "difficulty": "🍪🍪🍪🍪",
+    "cost": "💵💵💵",
+    "description": "Cheesecake is a sweet dessert consisting of one or more layers. The main, and thickest, layer consists of a mixture of a soft, fresh cheese, eggs, and sugar. If there is a bottom layer, it most often consists of a crust or base made from crushed cookies, graham crackers, pastry, or sometimes sponge cake.",
+    "ingredients": ["Cheese", "Milk", "Malkis Roma"],
+    "cookwares": ["Oven", "Mixer"],
+    "steps": ["Step 1", "Step 2", "Step 3"]
+  },
+  {
+    "id": 1,
+    "name": "Icecream",
+    "type": "Dessert",
+    "difficulty": "🍪",
+    "cost": "💵",
+    "description": "Ice cream is a frozen dessert, typically made from milk or cream and flavoured with a sweetener, either sugar or an alternative, and a spice, such as cocoa or vanilla, or with fruit such as strawberries or peaches. It can also be made by whisking a flavored cream base and liquid nitrogen together.",
+    "ingredients": [
+      "Topping (Optional)",
+      "Cold Milk",
+      "Ice Cream Mix (Any flavour)"
+    ],
+    "cookwares": ["Mixer"],
+    "steps": ["Mix'em up", "Put in freezer", "Done!"]
+  },
+  {
+    "id": 2,
+    "name": "Cookies",
+    "type": "Dessert",
+    "difficulty": "🍪🍪",
+    "cost": "💵",
+    "description": "A cookie, or a biscuit, is a baked or cooked snack or dessert that is typically small, flat and sweet. It usually contains flour, sugar, egg, and some type of oil, fat, or butter. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc.",
+    "ingredients": ["Cookie Dough, Chocolate Chips"],
+    "cookwares": ["Oven", "Mixer"],
+    "steps": [
+      "Mix'em up",
+      "Take a spoonful of mixed dough and bake it in oven",
+      "Step 3"
+    ]
+  }
+]
