@@ -55,6 +55,11 @@ header > h1 {
   transition: 0.15s ease-out;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .enlarge {
   width: 600px;
 }
