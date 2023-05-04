@@ -72,16 +72,9 @@ header > h1 {
   text-align: justify;
 }
 
-.recipe-prep {
-  display: grid;
-  grid-template-areas:
-    "prep-title prep-title"
-    "prep-ingredients prep-cookwares";
-}
-
-.recipe-prep > h2 {
-  grid-area: prep-title;
-  align-self: center;
+.recipe.prep {
+  display: flex;
+  flex-direction: column;
 }
 
 .recipe-steps {
@@ -100,20 +93,12 @@ h2 {
   color: #ff8c42;
 }
 
+.prep-cookwares,
 .prep-ingredients {
-  grid-area: prep-ingredients;
-  width: 100%;
-  list-style-position: inside;
-  list-style-type: circle;
-  padding-bottom: 20px;
-}
-
-.prep-cookwares {
-  grid-area: prep-cookwares;
   width: 100%;
   list-style-position: inside;
   list-style-type: square;
-  padding-bottom: 20px;
+  padding-block: 20px;
 }
 
 h3 {
@@ -183,6 +168,24 @@ footer > h1 {
 
   .recipe-prep {
     grid-area: recipe-prep;
+    display: grid;
+    grid-template-areas:
+      "prep-title prep-title"
+      "prep-ingredients prep-cookwares";
+    grid-template-columns: 50% 50%;
+  }
+
+  .recipe-prep > h2 {
+    grid-area: prep-title;
+    align-self: center;
+  }
+
+  .prep-ingredients {
+    grid-area: prep-ingredients;
+  }
+
+  .prep-cookwares {
+    grid-area: prep-cookwares;
   }
 
   .recipe-steps {

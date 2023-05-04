@@ -35,12 +35,45 @@
     "difficulty": "🍪🍪",
     "cost": "💵",
     "description": "A cookie, or a biscuit, is a baked or cooked snack or dessert that is typically small, flat and sweet. It usually contains flour, sugar, egg, and some type of oil, fat, or butter. It may include other ingredients such as raisins, oats, chocolate chips, nuts, etc.",
-    "ingredients": ["Cookie Dough, Chocolate Chips"],
+    "ingredients": ["Cookie Dough", "Chocolate Chips"],
     "cookwares": ["Oven", "Mixer"],
     "steps": [
       "Mix'em up",
       "Take a spoonful of mixed dough and bake it in oven",
       "Step 3"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Steak",
+    "image": "steak.jpg",
+    "type": "Meal",
+    "difficulty": "🍪🍪🍪🍪🍪",
+    "cost": "💵💵💵💵💵",
+    "description": "A steak is a thick cut of meat generally sliced across the muscle fibers, sometimes including a bone. It is normally grilled or fried. Steak can be diced, cooked in sauce, such as in steak and kidney pie, or minced and formed into patties, such as hamburgers.",
+    "ingredients": ["Meat", "Salt", "Parsley", "Oregano", "Pepper", "Butter"],
+    "cookwares": ["Frying Pan"],
+    "steps": [
+      "Marinate meat with salt, parsley, oregano, and pepper for 30 minutes",
+      "Grill marinated meat on the pan using butter",
+      "tbh idk the steps"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Dalgona Coffee",
+    "image": "dalgona-coffee.jpg",
+    "type": "Beverage",
+    "difficulty": "🍪",
+    "cost": "💵",
+    "description": "Dalgona coffee, also known as hand beaten coffee, is a beverage originating from Macau made by whipping equal parts instant coffee powder, sugar, and hot water until it becomes creamy and then adding it to cold or hot milk. Occasionally, it is topped with coffee powder, cocoa, crumbled biscuits, or honey.",
+    "ingredients": ["Ground Coffee", "Water", "Sugar", "Milk"],
+    "cookwares": ["Hand Mixer"],
+    "steps": [
+      "Mix ground coffee, sugar, and water with 3:1:2 ratio using the hand mixer",
+      "Pour milk into a glass",
+      "Beautifully scoop the mixed compound using a spoon to the glass of milk",
+      "Done!"
     ]
   }
 ]
