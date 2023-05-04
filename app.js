@@ -28,10 +28,24 @@ mongoose
 
 // APP SETUP
 const app = express();
-const index = fs.readFileSync(`${__dirname}/public/HTML/index.html`, "utf-8");
+const indexPage = fs.readFileSync(
+  `${__dirname}/public/HTML/index.html`,
+  "utf-8"
+);
+const recipePage = fs.readFileSync(
+  `${__dirname}/public/HTML/recipe.html`,
+  "utf-8"
+);
 const raw = fs.readFileSync(`${__dirname}/data/data.json`, "utf-8");
 const data = JSON.parse(raw);
-const tempCard = fs.readFileSync(`${__dirname}/public/HTML/card.html`, "utf-8");
+const tempCard = fs.readFileSync(
+  `${__dirname}/public/HTML/templates/cardTemplate.html`,
+  "utf-8"
+);
+const tempRecipe = fs.readFileSync(
+  `${__dirname}/public/HTML/templates/recipeTemplate.html`,
+  "utf-8"
+);
 
 // MODULES
 app.use(express.static("public"));
@@ -39,8 +53,16 @@ app.use(favicon(__dirname + "/public/favicon.ico"));
 
 // ROUTES
 app.get("/", (req, res) => {
-  const cards = data.map((el) => replaceTemplate(tempCard, el)).join("");
-  const output = index.replace("{%RECIPE_CARDS%}", cards);
+  let cards = data.map((el) => replaceTemplate(tempCard, el)).join("");
+  let output = indexPage.replace("{%RECIPE_CARDS%}", cards);
+  res.send(output);
+});
+
+app.get("/recipe", (req, res) => {
+  let recipe = data.find((obj) => obj.id == req.query.id);
+  recipe = replaceTemplate(tempRecipe, recipe);
+  let output = recipePage.replace("{%RECIPE%}", recipe);
+
   res.send(output);
 });
 
