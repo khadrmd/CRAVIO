@@ -2,6 +2,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  font-size: 1rem;
 
   /* border: 1px solid red; */
 }
@@ -14,7 +15,7 @@ body {
 
 main {
   background-color: white;
-  padding: 50px;
+  padding: .5rem;
 }
 
 header {
@@ -22,23 +23,20 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  height: 80px;
 }
 
 header > h1 {
   color: white;
-  font-size: 75px;
+  font-size: 3rem;
   font-weight: 100;
   justify-items: center;
 }
 
 .card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 2em;
-  /* grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem;
 }
 
 .card {
@@ -46,7 +44,7 @@ header > h1 {
   flex-direction: column;
   overflow: hidden;
 
-  width: 400px;
+  width: 100%;
 
   background-color: white;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -58,10 +56,6 @@ header > h1 {
 a {
   text-decoration: none;
   color: black;
-}
-
-.enlarge {
-  width: 600px;
 }
 
 .card-image {
@@ -76,7 +70,7 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   overflow-wrap: break-word;
-  font-size: 30px;
+  font-size: 2rem;
 
   border-top: 3px solid #ff8c42;
   border-bottom: 3px solid #ff8c42;
@@ -94,33 +88,43 @@ a {
 
 .card-desc span {
   text-align: center;
-  font-size: 22px;
+  font-size: 1rem;
 }
 
 footer {
   background-color: #ff8c42;
-  height: 120px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 50px;
+  padding: 0 3rem;
 }
 
 footer > p {
-  font-size: 16px;
+  font-size: 0.8rem;
   font-weight: 100;
   color: white;
 }
 
 footer > h1 {
-  font-size: 40px;
+  font-size: 1.5rem;
   font-weight: 100;
   color: white;
 }
 
 @media all and (min-width: 600px) {
+  main {
+    padding: 1rem 2rem;
+  }
+
   .card:hover {
     transform: scale(1.02);
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
   }
 }
