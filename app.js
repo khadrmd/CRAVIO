@@ -36,6 +36,10 @@ const recipePage = fs.readFileSync(
   `${__dirname}/public/HTML/recipe.html`,
   "utf-8"
 );
+const newRecipePage = fs.readFileSync(
+  `${__dirname}/public/HTML/newRecipe.html`,
+  "utf-8"
+);
 const raw = fs.readFileSync(`${__dirname}/data/data.json`, "utf-8");
 const data = JSON.parse(raw);
 const tempCard = fs.readFileSync(
@@ -64,6 +68,10 @@ app.get("/recipe", (req, res) => {
   let output = recipePage.replace("{%RECIPE%}", recipe);
 
   res.send(output);
+});
+
+app.get("/newRecipe", (req, res) => {
+  res.send(newRecipePage);
 });
 
 // app.get("/recipes", (req, res) => {
