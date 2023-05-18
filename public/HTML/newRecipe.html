@@ -12,7 +12,102 @@
   <body>
     <header><h1>CRAVIO</h1></header>
     <main>
-      <form action=""></form>
+      <h1>Add a New Recipe</h1>
+      <form>
+        <div class="form-group">
+          <label for="recipe-name">What is Your Recipe Called?</label>
+          <input
+            type="text"
+            name="recipe-name"
+            id="recipe-name"
+            placeholder="Enter recipe name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="recipe-image">Your Best Photo of the Recipe!</label>
+          <input
+            type="file"
+            id="recipe-image"
+            name="recipe-image"
+            accept="image/*"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="recipe-category">What Kind of Recipe is it?</label>
+          <select name="recipe-category" id="recipe-category" required>
+            <option value="">Select category</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Meal">Meal</option>
+            <option value="Beverage">Beverage</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="recipe-difficulty"
+            >How Difficult is the Recipe?<sup>*</sup></label
+          >
+          <select name="recipe-difficulty" id="recipe-difficulty" required>
+            <option value="">Select diffculty</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="recipe-cost">What About the Cost?<sup>*</sup></label>
+          <select name="recipe-cost" id="recipe-cost" required>
+            <option value="">Select cost</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="recipe-desc">Describe Your Recipe!</label>
+          <textarea
+            name="recipe-desc"
+            id="recipe-desc"
+            placeholder="Enter a short description"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="recipe-ingredients">List All of the Ingredients!</label>
+          <input
+            type="text"
+            name="recipe-ingredients"
+            id="recipe-ingredients"
+            placeholder="Ingredient 1"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="recipe-cookwares">The Cookwares Too!</label>
+          <input
+            type="text"
+            name="recipe-cookwares"
+            id="recipe-cookwares"
+            placeholder="Cookware 1"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="recipe-steps">Now for the Steps!</label>
+          <input
+            type="text"
+            name="recipe-steps"
+            id="recipe-steps"
+            placeholder="Step 1"
+            required
+          />
+        </div>
+      </form>
     </main>
     <footer>
       <h1>CRAVIO</h1>
